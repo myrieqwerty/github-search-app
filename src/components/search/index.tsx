@@ -7,6 +7,7 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 import s from './search.module.scss'
 
 export const Search = () => {
+  //получение запроса из поисковой строки
   const [searchParams] = useSearchParams()
   const query = searchParams.get('query') as string
 

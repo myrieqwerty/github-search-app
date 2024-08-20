@@ -1,3 +1,5 @@
+//все что связано с репозиторием: типы, запросы на апи, graphql документ, слайс засунул сюда
+
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { client } from "../../api/client";
 import { gql } from "graphql-request";

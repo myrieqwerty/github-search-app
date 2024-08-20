@@ -3,7 +3,7 @@ import { fetchRepos, PaginationInfo, Repo, setActiveRepo, Status } from "../../.
 import { useDispatch } from "react-redux"
 import { AppDispatch, RootState } from "../../../store"
 import { useSelector } from "react-redux"
-import { useParams, useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { useState } from "react"
 
 type Props = {
@@ -71,7 +71,6 @@ export const RepoTable = ({repos} : Props) => {
               </TableBody>
             </Table>)}
             {repos.length > 0 && <TablePagination component={'div'} rowsPerPage={10} count={pageInfo?.totalCount} page={page} onPageChange={(e, newPage) => {handleChangePage(newPage)}}/>}
-
         </>
       )}
     </Box>

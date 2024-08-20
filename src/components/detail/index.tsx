@@ -13,11 +13,13 @@ export const Detail = () => {
   const activeRepo : Repo = useSelector<RootState>(state => state.repos.activeRepo) as Repo
   return (
     <Box bgcolor={'#F2F2F2'} p={'24px'} flexBasis={'480px'} display={'flex'} flexDirection={'column'} gap={'16px'}>
-      {activeRepo === null &&  (
+
+      {!activeRepo &&  (
         <Box display={'flex'} flex={'auto'} justifyContent={'center'} alignItems={'center'}>
           <Typography fontSize={'14px'} fontWeight={400} textAlign={'center'} color={'#4F4F4F'}>Выберите репозитарий</Typography>
         </Box>
       )}
+
       {activeRepo && (
         <>
           <Typography variant="h2" fontSize={'32px'} fontWeight={'400'} color={'#000000DE'}>
